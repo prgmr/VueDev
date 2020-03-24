@@ -66,10 +66,10 @@
                 if (cityMaxTemp === this.pressedCityObj) {
                     this.gameResult = "YOU WON!";
                     this.$store.commit('ADD_SCORE')
-                    this.$store.commit('SET_HISTORY', [this.city1stObj, this.city2ndObj, true])
+                    this.$store.commit('SET_HISTORY', [this.box1Text, this.box2Text, true])
                 } else {
                     this.gameResult = "YOU LOST!";
-                    this.$store.commit('SET_HISTORY', [this.city1stObj, this.city2ndObj, false])
+                    this.$store.commit('SET_HISTORY', [this.box1Text, this.box2Text, false])
                 }
             },
         },
@@ -81,14 +81,14 @@
 
             box1Text() {
                 if (this.showTemperature) {
-                    return `${this.city1stObj.city}, ${this.city1stObj.country}, ${this.city1stObj.temperature} ${this.unit}`
+                    return `${this.city1stObj.city}, ${this.city1stObj.country}, ${this.temperature(this.city1stObj.temperature)} ${this.unit}`
                 }
                 return `${this.city1stObj.city}, ${this.city1stObj.country}`;
             },
 
             box2Text() {
                 if (this.showTemperature) {
-                    return `${this.city2ndObj.city}, ${this.city2ndObj.country}, ${this.city2ndObj.temperature} ${this.unit}`
+                    return `${this.city2ndObj.city}, ${this.city2ndObj.country}, ${this.temperature(this.city2ndObj.temperature)} ${this.unit}`
                 }
                 return `${this.city2ndObj.city}, ${this.city2ndObj.country}`;
             },
@@ -102,6 +102,9 @@
             unit() {
                 return this.$store.state.unit;
             },
+            temperature() {
+                return this.$store.getters.GET_TEMP_FOR_CUR_UNITS;
+            }
         },
 
         created() {
@@ -113,10 +116,10 @@
         },
 
         mounted() {
-            this.$store.dispatch('SET_1ST_CITY_PER_ROUND', this.city1stObj)
+            // this.$store.dispatch('SET_1ST_CITY_PER_ROUND', this.city1stObj)
             this.$store.dispatch("DEL_CITY", this.city1stObj)
 
-            this.$store.dispatch('SET_2ND_CITY_PER_ROUND', this.city2ndObj)
+            // this.$store.dispatch('SET_2ND_CITY_PER_ROUND', this.city2ndObj)
             this.$store.dispatch("DEL_CITY", this.city2ndObj)
         },
     };

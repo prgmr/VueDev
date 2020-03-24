@@ -33,12 +33,8 @@
         },
 
         computed: {
-            unit() {
-                return this.$store.state.unit;
-            },
-            temperature() {
-                return this.$store.getters.GET_TEMP_FOR_CUR_UNITS;
-            }
+
+
         }
     };
 </script>

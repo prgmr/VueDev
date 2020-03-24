@@ -4,12 +4,12 @@
         <hr/>
         <h1>Show in</h1>
         <form v-if="unit === '℃'">
-            <input @change="setVal" type="radio" name="view" value="℃" checked/>℃
-            <input @change="setVal" type="radio" name="view" value="℉"/>℉
+            <input @change="setUnit" type="radio" name="view" value="℃" checked/>℃
+            <input @change="setUnit" type="radio" name="view" value="℉"/>℉
         </form>
         <form v-else>
-            <input @change="setVal" type="radio" name="view" value="℃"/>℃
-            <input @change="setVal" type="radio" name="view" value="℉" checked/>℉
+            <input @change="setUnit" type="radio" name="view" value="℃"/>℃
+            <input @change="setUnit" type="radio" name="view" value="℉" checked/>℉
         </form>
 
         <h1>History</h1>
@@ -35,7 +35,7 @@
         },
 
         methods: {
-            setVal(event) {
+            setUnit(event) {
                 this.$store.dispatch('SET_UNITS', event.target.value)
             },
         }

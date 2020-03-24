@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="box">{{ round[0].city }}, {{ round[0].country }}, {{ round[0].temperature }}</div>
-        <div class="box">{{ round[1].city }}, {{ round[1].country }}, {{ round[1].temperature }}</div>
+        <div class="box">{{ round[0] }}</div>
+        <div class="box">{{ round[1] }}</div>
         <span>{{ round[2] ? '✓' : '✕' }}</span>
     </div>
 </template>
@@ -20,7 +20,7 @@
 
 <style scoped>
     .box {
-        width: 140px;
+        width: 170px;
         height: 30px;
         border: black solid medium;
         background-color: beige;
