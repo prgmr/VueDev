@@ -6,8 +6,8 @@
         <h1>Your score: {{ score }}</h1>
         <h3>Which city is hotter?</h3>
         <p>
-            <city @pressEvent="getCityObj" :text="box1Text"></city>
-            <city @pressEvent="getCityObj" :text="box2Text"></city>
+            <city @click.prevent.stop @pressEvent="getCityObj" :text="box1Text"></city>
+            <city @click.prevent.stop @pressEvent="getCityObj" :text="box2Text"></city>
         </p>
         <div v-if="showTemperature">
             <h1>{{gameResult}}</h1>

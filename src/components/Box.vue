@@ -11,6 +11,7 @@
         name: "Box",
         props: {
             round: {
+                type: Array,
                 required: true
             }
         },

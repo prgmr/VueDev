@@ -3,9 +3,13 @@
         <router-link to="/">back</router-link>
         <hr/>
         <h1>Show in</h1>
-        <form>
-            <input @change="setVal" type="radio" name="view" value="℃"/>℃
+        <form v-if="unit === '℃'">
+            <input @change="setVal" type="radio" name="view" value="℃" checked/>℃
             <input @change="setVal" type="radio" name="view" value="℉"/>℉
+        </form>
+        <form v-else>
+            <input @change="setVal" type="radio" name="view" value="℃"/>℃
+            <input @change="setVal" type="radio" name="view" value="℉" checked/>℉
         </form>
 
         <h1>History</h1>
