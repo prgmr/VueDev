@@ -6,3 +6,7 @@
 Ведется подсчет очков, история игр.
 
 Используются: vue.js, vuex, openweathermap api.  
+
+~~~
+npm run serve
+~~~
