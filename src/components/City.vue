@@ -5,8 +5,6 @@
 </template>
 
 <script>
-    import {API} from '@/utils/api'
-
     export default {
         name: "City",
 
@@ -17,32 +15,20 @@
             }
         },
 
-
         methods: {
-
-
-            async getTemperature(city, country) {
-                let result = await API.getWeatherByCityCountry(city, country);
-                console.log(result)
-                return result.temperature;
-            },
-
             sendPressedCityObj() {
                 this.$emit("pressEvent", this.text);
             }
         },
 
-        computed: {
-
-
-        }
+        computed: {}
     };
 </script>
 
 <style scoped>
     .box {
-        width: 160px;
-        height: 80px;
+        width: 250px;
+        height: 100px;
         border: black solid medium;
         background-color: beige;
         text-align: center;

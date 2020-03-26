@@ -21,7 +21,7 @@
 <style scoped>
     .box {
         width: 170px;
-        height: 30px;
+        height: 50px;
         border: black solid medium;
         background-color: beige;
         text-align: center;
