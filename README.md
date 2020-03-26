@@ -1,24 +1,8 @@
-# VudDev
+# VueDev
 
-## Project setup
-```
-npm install
-```
+Игра, в которой игрок угадывает более теплый город.   
+Игроку на выбор предоставляются два случайных города.  
+Игрок выбирает один из них и узнаёт угадал ли он или нет.  
+Ведется подсчет очков, история игр.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Используются: vue.js, vuex, openweathermap api.  
